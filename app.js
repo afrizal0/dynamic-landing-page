@@ -5,9 +5,8 @@ const focus = document.getElementById('focus'),
 		header = document.getElementById('header');
 
 const showDate = () => {
-	let today = new Date();
-	today.setHours(20);
-	let hour = today.getHours(),
+	let today = new Date(), 
+		hour = today.getHours(),
 		min = today.getMinutes(),
 		second = today.getSeconds();
 		sys = (hour >= 0 && hour <= 12) ? 'AM' : 'PM';
@@ -20,9 +19,8 @@ function addZero(n) {
 }
 
 function setBg() {
-	let today = new Date();
-	today.setHours(20);
-	hour = today.getHours();
+	let today = new Date(),
+		hour = today.getHours();
 	if(hour < 12) {
 		// Morning
 		header.style.backgroundImage = "url('img/morning.jpg')";
